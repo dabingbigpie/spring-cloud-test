@@ -1,0 +1,22 @@
+# 服务端口
+server:
+  port: 8088
+# 注册中心url
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+# 注册中心名字
+spring:
+  application:
+    name: service-config
+# 配置存储地址(git)
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dabingbigpie/spring-cloud-config.git
+# 存储文件夹
+          search-paths: myconfig
+# git主分支
+          label: master
