@@ -17,7 +17,7 @@ public class TestController {
     @HystrixCommand(fallbackMethod = "fallback")
     @RequestMapping("/hello")
     public String hello(){
-        return "hello" + "端口："+ port;
+        return "hello啊" + "端口："+ port;
     }
 
     String fallback(){
